@@ -1,0 +1,93 @@
+---
+interface Props {
+  title: string
+  description: string
+  color: 'green' | 'red' | 'yellow'
+}
+
+const {title, description, color} = Astro.props
+---
+
+<article class:list={['feature-card', color]}>
+  <div class:list={['feature-icon', color]} aria-hidden="true">
+    <slot name="icon" />
+  </div>
+  <h3>{title}</h3>
+  <p>{description}</p>
+</article>
+
+<style>
+  .feature-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    margin: 0 1rem;
+    border-left: 4px solid transparent;
+  }
+  .feature-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+  .feature-card.green {
+    border-left-color: rgba(72, 187, 120, 0.3);
+  }
+  .feature-card.red {
+    border-left-color: rgba(245, 101, 101, 0.3);
+  }
+  .feature-card.yellow {
+    border-left-color: rgba(246, 224, 94, 0.4);
+  }
+
+  .feature-icon {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+  }
+  .feature-icon.green {
+    background-color: #48bb78;
+  }
+  .feature-icon.red {
+    background-color: #f56565;
+  }
+  .feature-icon.yellow {
+    background-color: #f6e05e;
+  }
+
+  .feature-card h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-card p {
+    font-size: 0.875rem;
+    color: #718096;
+  }
+
+  @media (min-width: 640px) {
+    .feature-card {
+      padding: 2rem;
+      margin: 0;
+    }
+    .feature-icon {
+      height: 4rem;
+      width: 4rem;
+      margin-bottom: 1.5rem;
+    }
+    .feature-card h3 {
+      font-size: 1.25rem;
+    }
+    .feature-card p {
+      font-size: 1rem;
+    }
+  }
+</style>

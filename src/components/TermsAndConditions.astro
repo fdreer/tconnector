@@ -1,0 +1,201 @@
+---
+// src/components/TermsAndConditions.astro
+const today = new Date()
+---
+
+<section class="legal-page">
+  <div class="container">
+    <header>
+      <h1>Términos y Condiciones</h1>
+      <p class="subtitle">
+        Última actualización: {
+          today.toLocaleDateString('es-AR', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })
+        }
+      </p>
+    </header>
+
+    <article class="legal-content">
+      <p>
+        Al instalar y utilizar nuestro complemento para Google Sheets™
+        "TConnector" (en adelante, "el Servicio"), usted acepta y se compromete
+        a cumplir con los siguientes términos y condiciones.
+      </p>
+
+      <h2>1. Descripción del Servicio</h2>
+      <p>
+        TConnector permite la conexión entre Google Sheets™ y el sistema Tango
+        Gestión mediante el uso de credenciales de API, facilitando la
+        importación de reportes y datos administrativos. Su uso está orientado a
+        usuarios que cuenten con acceso legítimo a Tango Gestión.
+      </p>
+
+      <h2>2. Aceptación de los Términos</h2>
+      <p>
+        El uso del Servicio implica la aceptación plena y sin reservas de los
+        presentes Términos y Condiciones. Si no está de acuerdo con ellos, por
+        favor, no utilice el complemento.
+      </p>
+
+      <h2>3. Acceso a Datos y Privacidad</h2>
+      <p>
+        TConnector no almacena, comparte ni vende ningún dato personal ni
+        empresarial del usuario. Toda la información importada se mantiene
+        dentro del entorno de Google Sheets™ del propio usuario. El Servicio
+        accede únicamente a los datos necesarios para realizar la función
+        específica del complemento, y depende de las credenciales que el usuario
+        suministra.
+      </p>
+      <p>
+        Para más detalles, consulte nuestra <a href="/privacidad"
+          >Política de Privacidad</a
+        >.
+      </p>
+
+      <h2>4. Uso del Servicio</h2>
+      <p>El usuario es responsable de:</p>
+      <ul>
+        <li>La veracidad y seguridad de los datos importados.</li>
+        <li>El resguardo de sus credenciales de la API de Tango Gestión.</li>
+        <li>
+          No utilizar el Servicio para fines ilegales, ni violar los Términos de
+          Uso de Google™ ni de Tango Software.
+        </li>
+      </ul>
+      <p>
+        El uso indebido del Servicio puede resultar en la suspensión o
+        terminación del acceso.
+      </p>
+
+      <h2>5. Garantías y Disponibilidad</h2>
+      <p>
+        El Servicio se proporciona “tal cual”, sin garantías de ningún tipo,
+        explícitas o implícitas. No se garantiza que el Servicio esté libre de
+        errores, que funcione sin interrupciones, ni que sea compatible con
+        futuras versiones de Google™ o Tango Gestión. La funcionalidad depende
+        de servicios de terceros (Google™ y Tango Software), sobre los cuales
+        el desarrollador no tiene control.
+      </p>
+
+      <h2>6. Limitación de Responsabilidad</h2>
+      <p>
+        En la máxima medida permitida por la ley, el desarrollador no será
+        responsable por daños directos, indirectos, incidentales, consecuentes o
+        especiales derivados del uso o imposibilidad de uso del Servicio,
+        incluyendo pero no limitado a pérdida de datos, pérdida de ingresos o
+        daños técnicos.
+      </p>
+
+      <h2>7. Propiedad Intelectual</h2>
+      <p>
+        El nombre TConnector, su código fuente, diseño, y documentación asociada
+        son propiedad intelectual del desarrollador. Los datos importados por el
+        usuario siguen siendo de su exclusiva propiedad.
+      </p>
+
+      <h2>8. Modificaciones a los Términos</h2>
+      <p>
+        Nos reservamos el derecho de modificar estos Términos y Condiciones en
+        cualquier momento. Los cambios serán informados mediante actualización
+        del complemento o por medios razonables. El uso continuado del Servicio
+        implicará su aceptación de los nuevos términos.
+      </p>
+
+      <h2>9. Terminación del Servicio</h2>
+      <p>
+        El usuario puede dejar de utilizar el complemento en cualquier momento
+        desinstalándolo desde Google™. Nos reservamos el derecho de suspender o
+        cancelar el Servicio de forma temporal o definitiva, sin previo aviso,
+        por motivos técnicos, legales o de seguridad.
+      </p>
+
+      <h2>10. Contacto</h2>
+      <p>
+        Para cualquier consulta, puedes contactarnos en: <a
+          href="mailto:francodreer@gmail.com">francodreer@gmail.com</a
+        >
+      </p>
+    </article>
+  </div>
+</section>
+
+<style>
+  .legal-page {
+    padding: 3rem 0;
+    background-color: #f9fafb;
+  }
+
+  .legal-page .container {
+    max-width: 800px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #2d3748;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: #718096;
+    margin-top: 0.5rem;
+  }
+
+  .legal-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .legal-content p,
+  .legal-content li {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .legal-content ul,
+  .legal-content ol {
+    padding-left: 1.5rem;
+  }
+
+  .legal-content a {
+    color: #4299e1;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .legal-content a:hover {
+    text-decoration: underline;
+  }
+
+  @media (min-width: 640px) {
+    .legal-page {
+      padding: 4rem 0;
+    }
+    h1 {
+      font-size: 2.75rem;
+    }
+    .legal-content h2 {
+      font-size: 1.75rem;
+    }
+    .legal-content p,
+    .legal-content li {
+      font-size: 1.125rem;
+    }
+  }
+</style>

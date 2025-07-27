@@ -1,0 +1,85 @@
+<header>
+  <div class="container">
+    <nav>
+      <a href="/" class="logo" aria-label="TConnector - Inicio">
+        <img src="/Logo478.png" alt="TConnector Logo" class="logo-icon" />
+        <span class="brand-name">TConnector</span>
+      </a>
+      <button class="install-btn" aria-label="Instalar TConnector">
+        Instalar
+      </button>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    z-index: 50;
+    border-bottom: 1px solid rgba(72, 187, 120, 0.1);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  nav {
+    padding: 0.75rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .logo-icon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  .brand-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #2d3748;
+  }
+
+  .install-btn {
+    background-color: #4299e1;
+    color: white;
+    font-weight: 700;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .install-btn:hover {
+    background-color: #3182ce;
+    box-shadow: 0 10px 15px -3px rgba(66, 153, 225, 0.2);
+  }
+
+  @media (min-width: 640px) {
+    nav {
+      padding: 1rem 0;
+    }
+    .logo-icon {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+    .brand-name {
+      font-size: 1.25rem;
+    }
+    .install-btn {
+      padding: 0.5rem 1rem;
+    }
+  }
+</style>

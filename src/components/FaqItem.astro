@@ -1,0 +1,88 @@
+<details>
+  <summary>
+    <h3><slot name="question" /></h3>
+    <span class="faq-arrow" aria-hidden="true">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </span>
+  </summary>
+  <p><slot name="answer" /></p>
+</details>
+
+<style>
+  details {
+    background-color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d3748;
+    padding-right: 1rem;
+  }
+
+  .faq-arrow {
+    transition: transform 0.3s ease;
+    color: #4299e1;
+  }
+
+  details[open] .faq-arrow {
+    transform: rotate(180deg);
+  }
+
+  details p {
+    font-size: 0.875rem;
+    color: #718096;
+    margin-top: 1rem;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (min-width: 640px) {
+    details {
+      padding: 1.5rem;
+    }
+    summary h3 {
+      font-size: 1.125rem;
+    }
+    details p {
+      font-size: 1rem;
+    }
+  }
+</style>

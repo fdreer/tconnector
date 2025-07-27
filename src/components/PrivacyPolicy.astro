@@ -1,0 +1,179 @@
+---
+const today = new Date()
+---
+
+<section class="privacy-policy">
+  <div class="container">
+    <header>
+      <h1>Política de Privacidad</h1>
+      <p class="subtitle">
+        Última actualización: {
+          today.toLocaleDateString('es-AR', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })
+        }
+      </p>
+    </header>
+
+    <article class="privacy-content">
+      <h2>TConnector</h2>
+      <p>
+        El uso de la información recibida de las API de Google™ por parte de
+        TConnector se adherirá a la <a
+          href="https://developers.google.com/terms/api-services-user-data-policy"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Política de Datos de Usuario de los Servicio de API de Google</a
+        >, incluidos los requisitos de Uso Limitado.
+      </p>
+
+      <h2>Tu información personal</h2>
+      <p>
+        Este complemento no recopila, almacena ni comparte ninguna informacion
+        personal de correo electronico, foto de perfil ni a ningun otro dato
+        personal de tu cuenta de Google™. Toda la configuracion de conexión se
+        guarda de forma segura en tu propio entorno de Google™, inaccesible
+        para nosotros.
+      </p>
+
+      <h2>Este complemento sí</h2>
+      <ul>
+        <li>
+          Utiliza los <a
+            href="https://developers.google.com/apps-script/reference/properties?hl=es-419"
+            target="_blank"
+            rel="noopener noreferrer">properties services</a
+          > para almacenar datos relacionados con el documento y el script (por ejemplo:
+          el token de la API de Tango, el número de empresa y la llave del sistema).
+        </li>
+        <li>Se conecta a servicios externos utilizando "UrlFetchApp".</li>
+        <li>Utiliza 1 ámbito no sensible y 1 ámbito sensible.</li>
+      </ul>
+
+      <h2>Ámbitos</h2>
+      <p>El complemento utilizará los siguientes ámbitos:</p>
+      <ol class="scopes-list">
+        <li>
+          <code>https://www.googleapis.com/auth/spreadsheets.currentonly</code>
+          <p class="scope-description">
+            Se usará para almacenar, actualizar y recuperar datos relacionados
+            con el documento y el script en los properties services.
+          </p>
+        </li>
+        <li>
+          <code>https://www.googleapis.com/auth/script.external_request</code>
+          <p class="scope-description">
+            Se usará para realizar solicitudes GET a la API de Tango en base a
+            los datos de configuración de conexión.
+          </p>
+        </li>
+      </ol>
+
+      <h2>Contacto</h2>
+      <p>
+        Para cualquier consulta, puedes contactarnos en: <a
+          href="mailto:francodreer@gmail.com">francodreer@gmail.com</a
+        >
+      </p>
+    </article>
+  </div>
+</section>
+
+<style>
+  .privacy-policy {
+    padding: 3rem 0;
+    background-color: #f9fafb;
+  }
+
+  .privacy-policy .container {
+    max-width: 800px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #2d3748;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: #718096;
+    margin-top: 0.5rem;
+  }
+
+  .privacy-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .privacy-content p,
+  .privacy-content li {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .privacy-content ul,
+  .privacy-content ol {
+    padding-left: 1.5rem;
+  }
+
+  .privacy-content a {
+    color: #4299e1;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .privacy-content a:hover {
+    text-decoration: underline;
+  }
+
+  .scopes-list li {
+    margin-bottom: 1.5rem;
+  }
+
+  .scope-description {
+    margin-top: 0.5rem;
+    color: #718096;
+  }
+
+  code {
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    background-color: #e2e8f0;
+    color: #2d3748;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    word-break: break-all;
+  }
+
+  @media (min-width: 640px) {
+    .privacy-policy {
+      padding: 4rem 0;
+    }
+    h1 {
+      font-size: 2.75rem;
+    }
+    .privacy-content h2 {
+      font-size: 1.75rem;
+    }
+    .privacy-content p,
+    .privacy-content li {
+      font-size: 1.125rem;
+    }
+  }
+</style>

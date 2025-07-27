@@ -1,0 +1,163 @@
+<section class="hero">
+  <div class="container">
+    <h1>
+      <span class="tango-dark">T</span><span class="tango-blue">Connector</span>
+    </h1>
+    <p>
+      Tus reportes de Tango,<br />
+      directo en Google Sheets
+    </p>
+    <p class="hero-description">
+      Tus reportes de Tango, a un clic de distancia. Inserta los datos que
+      necesitas en tus hojas de cálculo sin salir de Google Sheets.
+    </p>
+    <div class="cta-buttons">
+      <a href="#" class="btn-primary">Empezar Ahora</a>
+      <a href="#faq" class="btn-secondary">Saber Más</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 2rem 0;
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      rgba(246, 224, 94, 0.05) 50%,
+      #f9fafb 100%
+    );
+    text-align: center;
+    border-bottom: 1px solid rgba(72, 187, 120, 0.1);
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 .tango-dark {
+    color: #2d3748;
+  }
+  .hero h1 .tango-blue {
+    color: #4299e1;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    color: #718096 !important;
+    max-width: 42rem;
+    margin: 0 auto 2rem !important;
+    padding: 0 1rem !important;
+  }
+
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background-color: #4299e1;
+    color: white;
+  }
+  .btn-primary:hover {
+    background-color: #3182ce;
+    transform: scale(1.05);
+  }
+
+  .btn-secondary {
+    background-color: #e2e8f0;
+    color: #2d3748;
+  }
+  .btn-secondary:hover {
+    background-color: #cbd5e0;
+    transform: scale(1.05);
+  }
+
+  @media (min-width: 640px) {
+    .hero {
+      padding: 3rem 0;
+    }
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .hero p {
+      font-size: 1.5rem;
+    }
+    .hero-description {
+      font-size: 1.125rem !important;
+    }
+    .cta-buttons {
+      flex-direction: row;
+      gap: 1rem;
+    }
+    .btn-primary,
+    .btn-secondary {
+      /* 👇 Cambios aquí */
+      width: 13rem; /* 1. Se establece un ancho fijo */
+      text-align: center; /* 2. Se centra el texto por si el ancho es mayor */
+      padding: 0.75rem 2rem;
+      font-size: 1.125rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hero h1 {
+      font-size: 3.75rem;
+    }
+    .hero p {
+      font-size: 1.875rem;
+    }
+    .hero-description {
+      font-size: 1.25rem !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero {
+      padding: 5rem 0;
+    }
+    .hero h1 {
+      font-size: 4.5rem;
+    }
+    .hero p {
+      font-size: 2.25rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .hero h1 {
+      font-size: 5rem;
+    }
+    .hero p {
+      font-size: 2.5rem;
+    }
+  }
+</style>

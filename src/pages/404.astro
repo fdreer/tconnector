@@ -1,0 +1,77 @@
+---
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout title="404: Página No Encontrada - TConnector">
+  <div class="not-found-container">
+    <div class="not-found-content">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-title">Página No Encontrada</h2>
+      <p class="error-description">
+        Lo sentimos, la página que estás buscando no existe o ha sido movida.
+      </p>
+      <a href="/" class="home-button">Volver al Inicio</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .not-found-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1rem;
+    min-height: calc(
+      100vh - 150px
+    ); /* Ajusta este valor según la altura de tu header y footer */
+  }
+
+  .error-code {
+    font-size: 6rem;
+    font-weight: 800;
+    color: #e2e8f0;
+    line-height: 1;
+  }
+
+  .error-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-top: -1.5rem; /* Superpone ligeramente el código 404 */
+    margin-bottom: 1rem;
+  }
+
+  .error-description {
+    font-size: 1.125rem;
+    color: #718096;
+    max-width: 400px;
+    margin: 0 auto 2rem;
+  }
+
+  .home-button {
+    display: inline-block;
+    background-color: #4299e1;
+    color: white;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .home-button:hover {
+    background-color: #3182ce;
+    transform: scale(1.05);
+  }
+
+  @media (min-width: 640px) {
+    .error-code {
+      font-size: 8rem;
+    }
+    .error-title {
+      font-size: 2.5rem;
+      margin-top: -2rem;
+    }
+  }
+</style>
