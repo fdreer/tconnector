@@ -1,9 +1,10 @@
 ---
-// src/pages/terminos.astro
-import Layout from '@/layouts/Layout.astro'
-import TermsAndConditions from '@/components/TermsAndConditions.astro'
+import LegalLayout from '@/layouts/LegalLayout.astro'
+const today = new Date()
 ---
 
-<Layout title="Términos y Condiciones">
-  <TermsAndConditions />
-</Layout>
+<LegalLayout title="Términos y Condiciones" lastUpdated={today}>
+  <p>Al instalar y utilizar nuestro complemento...</p>
+  <h2>1. Descripción del Servicio</h2>
+  <p>TConnector permite la conexión...</p>
+</LegalLayout>
