@@ -66,11 +66,17 @@ const {
   }
 
   body {
+    /* ✨ Propiedades añadidas para Flexbox */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    /* Estilos existentes */
     font-family: 'Inter', sans-serif;
     background-color: #ffffff;
     color: #1a202c;
-    line-height: 1.6;
-    letter-spacing: -0.025em;
+    line-height: 1.6; /* */
+    letter-spacing: -0.025em; /* */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -100,15 +106,13 @@ const {
     /* ... más espaciados ... */
   }
 
-  body {
-    font-family: var(--font-family-sans);
-    color: var(--color-text-dark);
-    /* ... */
+  main {
+    flex-grow: 1;
   }
 
   img {
     max-width: 100%;
-    height: auto;
+    height: auto; /* */
   }
 
   .container {
