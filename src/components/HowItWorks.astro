@@ -1,0 +1,277 @@
+---
+// src/components/HowItWorks.astro
+---
+
+<section class="how-it-works">
+  <div class="container">
+    <header class="section-header">
+      <h2>Tu primer reporte en 4 pasos</h2>
+      <p>
+        Conectar tus datos de Tango con Google Sheets es un proceso simple y
+        directo. Sigue esta guía para empezar.
+      </p>
+    </header>
+
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-text">
+          <h3>Paso 1: Instala y concede permisos</h3>
+          <p>
+            Luego de instalar el complemento desde la Google Workspace
+            Marketplace, ábrelo en tu hoja de cálculo. La primera vez, Google te
+            pedirá que concedas los permisos necesarios para que el complemento
+            pueda funcionar.
+          </p>
+          <ul class="permissions-list">
+            <li>
+              <strong>Ver y administrar hojas de cálculo:</strong> Permite que el
+              complemento escriba los datos de los reportes en la hoja activa.
+            </li>
+            <li>
+              <strong>Conectarse a un servicio externo:</strong> Necesario para poder
+              comunicarse con la API de Tango.
+            </li>
+          </ul>
+        </div>
+        <div class="step-images">
+          <img
+            src="/images/0.1.png"
+            alt="Se necesita permiso para acceder a los datos"
+            class="step-img-shadow img-wide"
+          />
+          <img
+            src="/images/0.2.png"
+            alt="Pantalla de permisos de Google"
+            class="step-img-shadow"
+          />
+        </div>
+      </div>
+
+      <div class="step reverse">
+        <div class="step-text">
+          <h3>Paso 2: Configura tu conexión</h3>
+          <p>
+            Ingresa tus credenciales de la API de Tango (Token, Llave de ERP y
+            N° de empresa) en la sección de "Conexión a Tango".
+          </p>
+          <p class="security-note">
+            Tus datos se guardan de forma segura utilizando las propiedades de
+            la propia hoja de cálculo, por lo que solo tú y los usuarios con
+            acceso pueden ver esta información.
+          </p>
+          <p>
+            Una vez conectado, verás el nombre de tu empresa en la pantalla
+            principal del complemento.
+          </p>
+        </div>
+        <div class="step-images">
+          <img
+            src="/images/2.png"
+            alt="Ajustes de conexión a la API de Tango"
+            class="step-img-shadow"
+          />
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-text">
+          <h3>Paso 3: Explora y elige tu reporte</h3>
+          <p>
+            Navega a través de los módulos de tu sistema para encontrar el
+            reporte que necesitas. Cada reporte te permitirá filtrar por rangos
+            de fechas, para acotar tu consulta.
+          </p>
+        </div>
+        <div class="step-images">
+          <img
+            src="/images/4.png"
+            alt="Selección de módulos"
+            class="step-img-shadow"
+          />
+          <img
+            src="/images/5.png"
+            alt="Selección de reportes de facturación"
+            class="step-img-shadow"
+          />
+        </div>
+      </div>
+
+      <div class="step reverse">
+        <div class="step-text">
+          <h3>Paso 4: Genera y analiza</h3>
+          <p>
+            Con un último clic en "Generar reporte", toda la información
+            solicitada se importará y se escribirá directamente en la hoja de
+            cálculo activa.
+          </p>
+          <p>
+            ¡Listo! Tus datos ya están en Google Sheets para que puedas
+            analizarlos, crear gráficos o utilizarlos como base para tus propios
+            informes.
+          </p>
+        </div>
+        <div class="step-images">
+          <img
+            src="/images/7.png"
+            alt="Reporte de datos importado en la hoja de cálculo"
+            class="step-img-shadow img-wide"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .how-it-works {
+    padding: 3rem 0;
+    background-color: #f9fafb;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #2d3748;
+  }
+
+  .section-header p {
+    font-size: 1.125rem;
+    color: #718096;
+    margin-top: 0.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.05),
+      0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+  }
+
+  .step-text h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 1rem;
+  }
+
+  .step-text p {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .permissions-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .permissions-list li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #4a5568;
+  }
+
+  .permissions-list li::before {
+    content: '✓';
+    color: #48bb78;
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+
+  .security-note {
+    font-size: 0.9rem !important;
+    color: #718096 !important;
+    border-left: 3px solid #4299e1;
+    padding-left: 1rem;
+    margin-top: 1rem;
+  }
+
+  .step-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .step-img-shadow {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0.75rem;
+    box-shadow:
+      0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  @media (min-width: 768px) {
+    .steps-container {
+      gap: 4rem;
+    }
+
+    .step {
+      grid-template-columns: 1fr; /* Mantenemos una sola columna por paso */
+      background-color: transparent;
+      padding: 2rem 0;
+      border: none;
+      box-shadow: none;
+      gap: 2rem;
+      max-width: 1000px; /* Ancho máximo para cada paso */
+      margin: 0 auto;
+    }
+
+    .step-text {
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .step-images {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start; /* Alinea las imágenes arriba */
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    /* REGLAS DE TAMAÑO SIMPLIFICADAS */
+    .step-img-shadow {
+      width: auto;
+      height: auto;
+      max-width: 350px; /* Tamaño máximo para las imágenes normales */
+    }
+
+    .step-img-shadow.img-wide {
+      max-width: 600px; /* Tamaño máximo para las imágenes anchas */
+    }
+
+    /* Eliminamos las reglas :nth-child que ya no son necesarias */
+  }
+</style>
