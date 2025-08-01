@@ -1,24 +1,8 @@
 ---
-import ContentPage from '@/components/ContentPage.astro'
-const today = new Date()
+import Layout from '@/layouts/Layout.astro'
+import PrivacyPolicy from '@/components/PrivacyPolicy.astro'
 ---
 
-<ContentPage title="Política de Privacidad" lastUpdated={today}>
-  <h2>TConnector</h2>
-  <p>
-    El uso de la información recibida de las API de Google por parte de
-    TConnector se adherirá a la <a
-      href="https://developers.google.com/terms/api-services-user-data-policy"
-      target="_blank"
-      rel="noopener noreferrer"
-      >Política de Datos de Usuario de los Servicio de API de Google</a
-    >, incluidos los requisitos de Uso Limitado.
-  </p>
-
-  <h2>Tu información personal</h2>
-  <p>
-    Este complemento no recopila, almacena ni comparte ninguna información
-    personal. Toda la configuración se guarda de forma segura en tu propio
-    entorno de Google.
-  </p>
-</ContentPage>
+<Layout title="Política de Privacidad | TConnector">
+  <PrivacyPolicy />
+</Layout>

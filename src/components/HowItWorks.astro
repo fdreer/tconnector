@@ -6,164 +6,123 @@ import img4 from '@/assets/images/4.png'
 import img6 from '@/assets/images/6.png'
 import img7 from '@/assets/images/7.png'
 import img9 from '@/assets/images/9.png'
+import InfoContainer from './InfoContainer.astro'
 ---
 
-<section class="how-it-works">
-  <div class="container">
-    <header class="section-header">
-      <h2>Tu primer reporte en 4 pasos</h2>
-      <p>
-        Conectar tus datos de Tango con Google Sheets es un proceso simple y
-        directo. Sigue esta guía para empezar.
-      </p>
-    </header>
-
-    <div class="steps-container">
-      <div class="step">
-        <div class="step-text">
-          <h3>Paso 1: Instala y concede permisos</h3>
-          <p>
-            Luego de instalar el complemento desde Google Workspace Marketplace,
-            ábrelo en cualquier hoja de cálculo. La primera vez, Google te
-            pedirá que concedas los permisos necesarios para que el complemento
-            pueda funcionar.
-          </p>
-          <ul class="permissions-list">
-            <li>
-              <strong>Ver y administrar hojas de cálculo:</strong> Permite que el
-              complemento escriba los datos de los reportes en la hoja activa.
-            </li>
-            <li>
-              <strong>Conectarse a un servicio externo:</strong> Necesario para poder
-              comunicarse con la API de Tango.
-            </li>
-          </ul>
-        </div>
-        <div class="step-images">
-          <Image
-            src={img1}
-            alt="Se necesita permiso para acceder a los datos"
-            class="step-img-shadow img-wide"
-          />
-          <Image
-            src={img2}
-            alt="Pantalla de permisos de Google"
-            class="step-img-shadow"
-            widths={[200, 400]}
-            sizes="(max-width: 768px) 100vw, 350px"
-          />
-        </div>
+<InfoContainer
+  title="Tu primer reporte en 4 pasos"
+  subtitle="Conectar tus datos de Tango con Google Sheets es un proceso simple y directo. Sigue esta guía para empezar."
+>
+  <div class="step-container">
+    <div class="step">
+      <div class="step-text">
+        <h3>Paso 1: Instala y concede permisos</h3>
+        <p>
+          Luego de instalar el complemento desde Google Workspace Marketplace,
+          ábrelo en cualquier hoja de cálculo. La primera vez, Google te pedirá
+          que concedas los permisos necesarios para que el complemento pueda
+          funcionar.
+        </p>
+        <ul class="permissions-list">
+          <li>
+            <strong>Ver y administrar hojas de cálculo:</strong> Permite que el complemento
+            escriba los datos de los reportes en la hoja activa.
+          </li>
+          <li>
+            <strong>Conectarse a un servicio externo:</strong> Necesario para poder
+            comunicarse con la API de Tango.
+          </li>
+        </ul>
       </div>
-
-      <div class="step reverse">
-        <div class="step-text">
-          <h3>Paso 2: Configura tu conexión</h3>
-          <p>
-            Ingresa tus credenciales de la API de Tango (token, llave del
-            sistema y n° de empresa) en la sección de "Conexión a Tango".
-          </p>
-          <p class="security-note">
-            Tus datos se guardan de forma segura utilizando las propiedades de
-            la propia hoja de cálculo, por lo que solo tú y los usuarios con
-            acceso pueden ver esta información.
-          </p>
-          <p>
-            Una vez conectado, verás el nombre de tu empresa en la pantalla
-            principal del complemento.
-          </p>
-        </div>
-        <div class="step-images">
-          <Image
-            src={img4}
-            alt="Ajustes de conexión a la API de Tango"
-            class="step-img-shadow"
-            widths={[200, 400]}
-            sizes="(max-width: 768px) 100vw, 350px"
-          />
-        </div>
+      <div class="step-images">
+        <Image
+          src={img1}
+          alt="Se necesita permiso para acceder a los datos"
+          class="step-img-shadow img-wide"
+        />
+        <Image
+          src={img2}
+          alt="Pantalla de permisos de Google"
+          class="step-img-shadow"
+          widths={[200, 400]}
+          sizes="(max-width: 768px) 100vw, 350px"
+        />
       </div>
+    </div>
 
-      <div class="step">
-        <div class="step-text">
-          <h3>Paso 3: Explora y elige tu reporte</h3>
-          <p>
-            Navega a través de los módulos para encontrar el reporte que
-            necesitas. Cada reporte te permitirá filtrar por rangos de fechas,
-            para acotar tu consulta.
-          </p>
-        </div>
-        <div class="step-images">
-          <Image
-            src={img6}
-            alt="Selección de módulos"
-            class="step-img-shadow"
-          />
-          <Image
-            src={img7}
-            alt="Selección de reportes de facturación"
-            class="step-img-shadow"
-          />
-        </div>
+    <div class="step reverse">
+      <div class="step-text">
+        <h3>Paso 2: Configura tu conexión</h3>
+        <p>
+          Ingresa tus credenciales de la API de Tango (token, llave del sistema
+          y n° de empresa) en la sección de "Conexión a Tango".
+        </p>
+        <p class="security-note">
+          Tus datos se guardan de forma segura utilizando las propiedades de la
+          propia hoja de cálculo, por lo que solo tú y los usuarios con acceso
+          pueden ver esta información.
+        </p>
+        <p>
+          Una vez conectado, verás el nombre de tu empresa en la pantalla
+          principal del complemento.
+        </p>
       </div>
+      <div class="step-images">
+        <Image
+          src={img4}
+          alt="Ajustes de conexión a la API de Tango"
+          class="step-img-shadow"
+          widths={[200, 400]}
+          sizes="(max-width: 768px) 100vw, 350px"
+        />
+      </div>
+    </div>
 
-      <div class="step reverse">
-        <div class="step-text">
-          <h3>Paso 4: Genera y analiza</h3>
-          <p>
-            Con un último clic en "Generar reporte", toda la información
-            solicitada se importará y se escribirá directamente en la hoja de
-            cálculo activa.
-          </p>
-          <p>
-            ¡Listo! Tus datos ya están en Google Sheets para que puedas
-            analizarlos, crear gráficos o utilizarlos como base para tus propios
-            informes.
-          </p>
-        </div>
-        <div class="step-images">
-          <Image
-            src={img9}
-            alt="Reporte de datos importado en la hoja de cálculo"
-            class="step-img-shadow img-wide"
-          />
-        </div>
+    <div class="step">
+      <div class="step-text">
+        <h3>Paso 3: Explora y elige tu reporte</h3>
+        <p>
+          Navega a través de los módulos para encontrar el reporte que
+          necesitas. Cada reporte te permitirá filtrar por rangos de fechas,
+          para acotar tu consulta.
+        </p>
+      </div>
+      <div class="step-images">
+        <Image src={img6} alt="Selección de módulos" class="step-img-shadow" />
+        <Image
+          src={img7}
+          alt="Selección de reportes de facturación"
+          class="step-img-shadow"
+        />
+      </div>
+    </div>
+
+    <div class="step reverse">
+      <div class="step-text">
+        <h3>Paso 4: Genera y analiza</h3>
+        <p>
+          Con un último clic en "Generar reporte", toda la información
+          solicitada se importará y se escribirá directamente en la hoja de
+          cálculo activa.
+        </p>
+        <p>
+          ¡Listo! Tus datos ya están en Google Sheets para que puedas
+          analizarlos, crear gráficos o utilizarlos como base para tus propios
+          informes.
+        </p>
+      </div>
+      <div class="step-images">
+        <Image
+          src={img9}
+          alt="Reporte de datos importado en la hoja de cálculo"
+          class="step-img-shadow img-wide"
+        />
       </div>
     </div>
   </div>
-</section>
+</InfoContainer>
 
 <style>
-  .how-it-works {
-    padding: 3rem 0;
-    background-color: #f9fafb;
-  }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  .section-header h2 {
-    font-size: 2.25rem;
-    font-weight: 800;
-    color: #2d3748;
-  }
-
-  .section-header p {
-    font-size: 1.125rem;
-    color: #718096;
-    margin-top: 0.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .steps-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-  }
-
   .step {
     display: grid;
     grid-template-columns: 1fr;
@@ -176,6 +135,7 @@ import img9 from '@/assets/images/9.png'
       0 4px 6px -1px rgba(0, 0, 0, 0.05),
       0 2px 4px -1px rgba(0, 0, 0, 0.03);
     border: 1px solid #e2e8f0;
+    margin-top: 2rem;
   }
 
   .step-text h3 {
@@ -246,14 +206,15 @@ import img9 from '@/assets/images/9.png'
     }
 
     .step {
-      grid-template-columns: 1fr; /* Mantenemos una sola columna por paso */
+      grid-template-columns: 1fr;
       background-color: transparent;
-      padding: 2rem 0;
       border: none;
       box-shadow: none;
       gap: 2rem;
-      max-width: 1000px; /* Ancho máximo para cada paso */
+      max-width: 1000px;
       margin: 0 auto;
+      padding: 0 1.5rem;
+      margin-top: 2rem;
     }
 
     .step-text {
@@ -266,22 +227,19 @@ import img9 from '@/assets/images/9.png'
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-items: flex-start; /* Alinea las imágenes arriba */
+      align-items: flex-start;
       gap: 2rem;
       flex-wrap: wrap;
     }
 
-    /* REGLAS DE TAMAÑO SIMPLIFICADAS */
     .step-img-shadow {
       width: auto;
       height: auto;
-      max-width: 350px; /* Tamaño máximo para las imágenes normales */
+      max-width: 350px;
     }
 
     .step-img-shadow.img-wide {
-      max-width: 600px; /* Tamaño máximo para las imágenes anchas */
+      max-width: 600px;
     }
-
-    /* Eliminamos las reglas :nth-child que ya no son necesarias */
   }
 </style>

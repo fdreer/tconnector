@@ -1,155 +1,89 @@
 ---
-import FeatureCard from '@/components/FeatureCard.astro'
+import InfoContainer from './InfoContainer.astro'
+import Card from '@/components/Card.astro'
 ---
 
-<section id="caracteristicas" class="features">
-  <div class="container">
-    <header>
-      <h2>Ventajas que transforman tu trabajo</h2>
-      <p>Descubrí por qué TConnector es la herramienta que necesitás.</p>
-      <div class="features-divider"></div>
-    </header>
-
-    <div class="features-grid">
-      <FeatureCard
-        color="green"
-        title="Reportes al Instante"
-        description="Accede a tus datos de Tango con un solo clic. Actualiza tus informes cuando lo necesites, asegurando que tus decisiones se basen siempre en la información más reciente disponible en tu Tango."
+<InfoContainer
+  title="Ventajas que transforman tu trabajo"
+  subtitle="Descubrí por qué TConnector es la herramienta que necesitás."
+>
+  <div class="features-grid">
+    <Card
+      color="green"
+      title="Reportes al Instante"
+      description="Accede a tus datos de Tango con un solo clic. Actualiza tus informes cuando lo necesites, asegurando que tus decisiones se basen siempre en la información más reciente."
+    >
+      <svg
+        slot="icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
       >
-        <svg
-          slot="icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-        </svg>
-      </FeatureCard>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+      </svg>
+    </Card>
 
-      <FeatureCard
-        color="red"
-        title="Ahorro de Tiempo"
-        description="Reemplaza el proceso de entrar al sistema, buscar y descargar reportes. Dedica tu tiempo a analizar la información, no a conseguirla."
+    <Card
+      color="red"
+      title="Ahorro de Tiempo"
+      description="Reemplaza el proceso de entrar al sistema, buscar y descargar reportes. Dedica tu tiempo a analizar la información, no a conseguirla."
+    >
+      <svg
+        slot="icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
       >
-        <svg
-          slot="icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-      </FeatureCard>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+    </Card>
 
-      <FeatureCard
-        color="yellow"
-        title="Fácil y Seguro"
-        description="Trabaja en el entorno que ya conoces: Google Sheets. La conexión utiliza la API oficial de Tango de forma segura y en modo de solo lectura."
+    <Card
+      color="yellow"
+      title="Fácil y Seguro"
+      description="Trabaja en el entorno que ya conoces: Google Sheets. La conexión utiliza la API oficial de Tango de forma segura y en modo de solo lectura."
+    >
+      <svg
+        slot="icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
       >
-        <svg
-          slot="icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-          ></path>
-        </svg>
-      </FeatureCard>
-    </div>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+        ></path>
+      </svg>
+    </Card>
   </div>
-</section>
+</InfoContainer>
 
 <style>
-  .features {
-    padding: 3rem 0;
-    background-color: var(--color-background-light);
-  }
-
-  .features header {
-    position: static;
-    text-align: center;
-    margin-bottom: 2rem;
-    background: none;
-    border: none;
-    box-shadow: none;
-    backdrop-filter: none;
-  }
-
-  .features h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2d3748;
-    padding: 0 1rem;
-  }
-
-  .features p {
-    font-size: 1rem;
-    color: #718096;
-    margin-top: 0.5rem;
-    padding: 0 1rem;
-  }
-
-  .features-divider {
-    width: 5rem;
-    height: 0.25rem;
-    background: linear-gradient(90deg, #48bb78 0%, #f6e05e 50%, #f56565 100%);
-    border-radius: 9999px;
-    margin: 1rem auto 0;
-    opacity: 0.6;
-  }
-
   .features-grid {
     display: grid;
-    grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
+    max-width: 1080px;
+    margin: 0 auto;
 
-  @media (min-width: 640px) {
-    .features {
-      padding: 4rem 0;
-    }
-    .features header {
-      margin-bottom: 3rem;
-    }
-    .features h2 {
-      font-size: 1.875rem;
-    }
-    .features p {
-      font-size: 1.125rem;
-    }
-    .features-grid {
-      gap: 2rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .features h2 {
-      font-size: 2.25rem;
-    }
-    .features-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 </style>

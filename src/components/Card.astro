@@ -2,14 +2,14 @@
 interface Props {
   title: string
   description: string
-  color: 'green' | 'red' | 'yellow'
+  color: 'green' | 'red' | 'yellow' | 'blue'
 }
 
 const {title, description, color} = Astro.props
 ---
 
-<article class:list={['feature-card', color]}>
-  <div class:list={['feature-icon', color]} aria-hidden="true">
+<article class:list={['info-card', color]}>
+  <div class:list={['info-icon', color]} aria-hidden="true">
     <slot name="icon" />
   </div>
   <h3>{title}</h3>
@@ -17,31 +17,34 @@ const {title, description, color} = Astro.props
 </article>
 
 <style>
-  .feature-card {
-    background: white;
+  .info-card {
+    background: var(--color-white);
     padding: 1.5rem;
     border-radius: 0.75rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: all 0.3s ease;
-    margin: 0 1rem;
     border-left: 4px solid transparent;
   }
-  .feature-card:hover {
+  .info-card:hover {
     transform: scale(1.02);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   }
-  .feature-card.green {
+  .info-card.green {
     border-left-color: rgba(72, 187, 120, 0.3);
   }
-  .feature-card.red {
+  .info-card.red {
     border-left-color: rgba(245, 101, 101, 0.3);
   }
-  .feature-card.yellow {
+  .info-card.yellow {
     border-left-color: rgba(246, 224, 94, 0.4);
   }
+  /* Estilo añadido para el color azul */
+  .info-card.blue {
+    border-left-color: rgba(66, 153, 225, 0.3);
+  }
 
-  .feature-icon {
+  .info-icon {
     border-radius: 50%;
     height: 3rem;
     width: 3rem;
@@ -49,45 +52,45 @@ const {title, description, color} = Astro.props
     align-items: center;
     justify-content: center;
     margin: 0 auto 1rem;
-    color: white;
+    color: var(--color-white);
   }
-  .feature-icon.green {
-    background-color: #48bb78;
+  .info-icon.green {
+    background-color: var(--color-accent-green);
   }
-  .feature-icon.red {
-    background-color: #f56565;
+  .info-icon.red {
+    background-color: var(--color-accent-red);
   }
-  .feature-icon.yellow {
-    background-color: #f6e05e;
+  .info-icon.yellow {
+    background-color: var(--color-accent-yellow);
+  }
+  /* Estilo añadido para el color azul */
+  .info-icon.blue {
+    background-color: var(--color-primary);
   }
 
-  .feature-card h3 {
+  .info-card h3 {
     font-size: 1.125rem;
     font-weight: 700;
-    color: #2d3748;
+    color: var(--color-text-primary);
     margin-bottom: 0.5rem;
   }
 
-  .feature-card p {
-    font-size: 0.875rem;
-    color: #718096;
+  .info-card p {
+    font-size: 1rem; /* Se establece el tamaño base a 1rem */
+    color: var(--color-text-muted);
   }
 
   @media (min-width: 640px) {
-    .feature-card {
+    .info-card {
       padding: 2rem;
-      margin: 0;
     }
-    .feature-icon {
+    .info-icon {
       height: 4rem;
       width: 4rem;
       margin-bottom: 1.5rem;
     }
-    .feature-card h3 {
+    .info-card h3 {
       font-size: 1.25rem;
-    }
-    .feature-card p {
-      font-size: 1rem;
     }
   }
 </style>

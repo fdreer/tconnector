@@ -1,126 +1,67 @@
-<section id="requisitos" class="requirements">
-  <div class="container">
-    <header>
-      <h2>Para un correcto funcionamiento</h2>
-      <p>
-        Para asegurar una conexión estable y sin interrupciones, ten en cuenta
-        estos puntos clave:
-      </p>
-    </header>
-    <div class="req-grid">
-      <div class="req-item">
-        <div class="req-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg
-          >
-        </div>
-        <h4>Servicio "Tango Connect" Activo</h4>
-        <p>
-          El complemento depende de que el servicio "Tango Connect", parte de tu
-          instalación de Tango, esté activo y funcionando correctamente en tu
-          servidor.
-        </p>
-      </div>
-      <div class="req-item">
-        <div class="req-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            ><path
-              d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"
-            ></path>
-            <path d="M8 12h8"></path></svg
-          >
-        </div>
-        <h4>Validez del Token API</h4>
-        <p>
-          Si el token de la API es actualizado, modificado o "blanqueado" en tu
-          sistema Tango, deberás actualizarlo también en los ajustes de conexión
-          del complemento.
-        </p>
-      </div>
-    </div>
+---
+import Card from '@/components/Card.astro'
+import InfoContainer from '@/components/InfoContainer.astro'
+---
+
+<InfoContainer
+  title="Para un Correcto Funcionamiento"
+  subtitle="Para asegurar una conexión estable y sin interrupciones, ten en cuenta estos puntos clave:"
+>
+  <div class="req-grid">
+    <Card
+      color="blue"
+      title="Servicio 'Connect' Activo"
+      description='El complemento depende de que el servicio "Tango Connect", esté activo y funcionando correctamente en tu servidor.'
+    >
+      <svg
+        slot="icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </Card>
+
+    <Card
+      color="blue"
+      title="Validez del Token"
+      description='Si el token de desarrollador es actualizado, modificado o "blanqueado" en Tango, deberás actualizarlo también en los ajustes de conexión del complemento.'
+    >
+      <svg
+        slot="icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"
+        ></path>
+        <path d="M8 12h8"></path>
+      </svg>
+    </Card>
   </div>
-</section>
+</InfoContainer>
 
 <style>
-  .requirements {
-    padding: 3rem 0;
-    /* Se activa el color de fondo utilizando la variable global */
-    background-color: var(--color-background-light);
-  }
-  .requirements .container {
-    max-width: var(--container-width-prose);
-  }
-  .requirements header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-  }
-  .requirements h2 {
-    font-size: 1.875rem;
-    font-weight: 700;
-    color: var(--color-text-primary);
-  }
-  .requirements header p {
-    font-size: 1.125rem;
-    color: var(--color-text-muted);
-    margin-top: 0.5rem;
-  }
   .req-grid {
     display: grid;
-    grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-  .req-item {
-    /* background-color: var(--color-white); */
-    border: 1px solid var(--color-border);
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .req-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    /* background-color: #eaf4ff; */
-    color: var(--color-accent);
-    margin-bottom: 1rem;
-  }
-  .req-item h4 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--color-text-primary);
-    margin-bottom: 0.5rem;
-  }
-  .req-item p {
-    font-size: 1rem;
-    color: var(--color-text-body);
-    line-height: 1.6;
-  }
-  @media (min-width: 768px) {
-    .req-grid {
-      grid-template-columns: 1fr 1fr;
-    }
+    max-width: 700px;
+    margin: 0 auto;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 </style>

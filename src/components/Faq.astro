@@ -1,14 +1,13 @@
 ---
 import FaqItem from '@/components/FaqItem.astro'
+import InfoContainer from '@/components/InfoContainer.astro'
 ---
 
-<section id="faq" class="faq">
+<InfoContainer
+  title="Preguntas Frecuentes"
+  subtitle="Resolvemos tus dudas más comunes"
+>
   <div class="faq-container">
-    <header>
-      <h2>Preguntas Frecuentes</h2>
-      <p>Resolvemos tus dudas más comunes</p>
-    </header>
-
     <FaqItem>
       <span slot="question">¿Es seguro conectar Tango con Google Sheets?</span>
       <span slot="answer">
@@ -41,73 +40,18 @@ import FaqItem from '@/components/FaqItem.astro'
       </span>
     </FaqItem>
   </div>
-</section>
+</InfoContainer>
 
 <style>
-  .faq {
-    padding: 3rem 0;
-    background-color: var(--color-background-light);
-  }
-
   .faq-container {
     max-width: 48rem;
     margin: 0 auto;
     padding: 0 1rem;
   }
 
-  .faq header {
-    position: static;
-    text-align: center;
-    margin-bottom: 2rem;
-    background: none;
-    border: none;
-    box-shadow: none;
-    backdrop-filter: none;
-  }
-
-  .faq h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2d3748;
-  }
-
-  .faq p {
-    font-size: 1rem;
-    color: #718096;
-    margin-top: 0.5rem;
-  }
-
-  a {
-    color: #4299e1;
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
   @media (min-width: 640px) {
-    .faq {
-      padding: 4rem 0;
-    }
     .faq-container {
       padding: 0 1.5rem;
-    }
-    .faq header {
-      margin-bottom: 3rem;
-    }
-    .faq h2 {
-      font-size: 1.875rem;
-    }
-    .faq p {
-      font-size: 1.125rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .faq h2 {
-      font-size: 2.25rem;
     }
   }
 </style>

@@ -1,0 +1,32 @@
+---
+interface Props {
+  title: string
+  subtitle: string
+}
+
+const {title, subtitle} = Astro.props
+---
+
+<section>
+  <div class="container">
+    <header class="section-header">
+      <h2>{title}</h2>
+      <p>{subtitle}</p>
+    </header>
+    <div class="content-wrapper">
+      <slot />
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 3rem 0;
+    background-color: var(--color-background-light);
+  }
+
+  .content-wrapper {
+    max-width: var(--container-width-max);
+    margin: 0 auto;
+  }
+</style>
