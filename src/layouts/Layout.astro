@@ -1,7 +1,8 @@
 ---
-// src/layouts/Layout.astro
 import Header from '@/components/Header.astro'
 import Footer from '@/components/Footer.astro'
+import '@/assets/fonts/inter.css'
+import '@/styles/global.css'
 
 interface Props {
   title: string
@@ -26,21 +27,18 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
-    />
+    /> -->
 
-    <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -57,85 +55,3 @@ const {
     <Footer />
   </body>
 </html>
-
-<style is:global>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    /* ✨ Propiedades añadidas para Flexbox */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-
-    /* Estilos existentes */
-    font-family: 'Inter', sans-serif;
-    background-color: #ffffff;
-    color: #1a202c;
-    line-height: 1.6; /* */
-    letter-spacing: -0.025em; /* */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  :root {
-    /* Paleta de Colores */
-    --color-primary: #4299e1;
-    --color-primary-hover: #3182ce;
-    --color-secondary: #e2e8f0;
-    --color-text-dark: #2d3748;
-    --color-text-light: #718096;
-    --color-white: #ffffff;
-    --color-light-gray: #f9fafb;
-    --color-border: #e2e8f0;
-
-    /* Tipografía */
-    --font-family-sans: 'Inter', sans-serif;
-    --font-size-base: 1rem; /* 16px */
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 1.25rem;
-    /* ... más tamaños ... */
-
-    /* Espaciado */
-    --spacing-1: 0.25rem;
-    --spacing-2: 0.5rem;
-    --spacing-4: 1rem;
-    /* ... más espaciados ... */
-  }
-
-  main {
-    flex-grow: 1;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto; /* */
-  }
-
-  .container {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-
-  @media (min-width: 640px) {
-    .container {
-      padding: 0 1.5rem;
-    }
-  }
-
-  a {
-    color: #4299e1; /* Color celeste del tema */
-    text-decoration: none; /* Quitamos el subrayado por defecto */
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-
-  a:hover {
-    text-decoration: underline; /* Subrayado al pasar el mouse */
-  }
-</style>

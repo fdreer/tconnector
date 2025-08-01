@@ -51,30 +51,26 @@
   }
 
   .tango-dark {
-    color: #2d3748;
+    color: var(--color-text-primary); /* <-- Uso de variable */
   }
   .tango-blue {
-    color: #4299e1;
+    color: var(--color-primary); /* <-- Uso de variable */
   }
-
   .install-btn {
-    background-color: #4299e1;
-    color: white;
+    background-color: var(--color-primary); /* <-- Uso de variable */
+    color: var(--color-white); /* <-- Uso de variable */
     font-weight: 700;
     padding: 0.5rem 0.75rem;
     font-size: 0.875rem;
     border-radius: 0.5rem;
     transition: all 0.2s ease;
-    text-decoration: none;
     border: none;
     cursor: pointer;
   }
-
   .install-btn:hover {
-    background-color: #3182ce;
+    background-color: var(--color-primary-hover); /* <-- Uso de variable */
     box-shadow: 0 10px 15px -3px rgba(66, 153, 225, 0.2);
   }
-
   @media (min-width: 640px) {
     nav {
       padding: 1rem 0;

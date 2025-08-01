@@ -1,0 +1,76 @@
+/* src/styles/global.css */
+:root {
+  --color-primary: #4299e1;
+  --color-primary-hover: #3182ce;
+  --color-secondary: #e2e8f0;
+  --color-secondary-hover: #cbd5e0;
+
+  --color-text-primary: #2d3748;
+  --color-text-body: #4a5568;
+  --color-text-muted: #718096;
+  --color-white: #ffffff;
+
+  --color-background-light: #f9fafb;
+  --color-border: #e2e8f0;
+
+  --color-accent-green: #48bb78;
+  --color-accent-red: #f56565;
+  --color-accent-yellow: #f6e05e;
+
+  --font-family-sans: 'Inter', sans-serif;
+
+  --container-width-prose: 800px;
+  --container-width-max: 1280px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-family-sans);
+  background-color: var(--color-white);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  letter-spacing: -0.025em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  flex-grow: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width-max);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
